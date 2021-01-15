@@ -17,7 +17,7 @@
 		"gulp-cheerio": "^1.0.0",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
-		"gulp-file-include": "^2.2.2",
+		"gulp-file-include": "^2.3.0",
 		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-newer": "^1.4.0",
@@ -29,6 +29,6 @@
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.5.1",
 		"jquery-mask-plugin": "^1.14.16",
-		"npm-check-updates": "^10.0.0"
+		"npm-check-updates": "^10.2.5"
 	}
 }

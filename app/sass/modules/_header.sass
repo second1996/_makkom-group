@@ -1,2 +1,19 @@
 @import '../helpers/helpers'
 
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: $z-index-header
+	&-inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.navigation
+			&-list
+				display: inline-flex
+				> li
+					> a
+					> ul
+						display: none
