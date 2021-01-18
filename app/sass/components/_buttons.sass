@@ -28,6 +28,10 @@
 	> span ~ .icon
 		margin-left: 8px
 
+
+/* ==========================================================================
+	 Button «Primary»
+	 ========================================================================== */
 .btn-primary
 	background-color: $orange
 	&:hover
@@ -37,15 +41,22 @@
 		box-shadow: 0 0 0 3px rgba($orange, 0.2)
 		background-color: lighten($orange, 2%)
 
+
+/* ==========================================================================
+	 Button «Download»
+	 ========================================================================== */
 .btn-cabinet
 	height: 48px
 	padding-left: 20px
 	padding-right: 20px
 	line-height: 48px
 
+
+/* ==========================================================================
+	 Button «Download»
+	 ========================================================================== */
 .btn-download
 	display: inline-flex
-	padding-right: 0
 	border: 0
 	background-color: $trsp
 	color: $textdark
@@ -83,3 +94,44 @@
 		.btn-download-icon
 			background-color: darken($green, 5%)
 			transform: none
+
+
+/* ==========================================================================
+	 Button «Download» — small
+	 ========================================================================== */
+.btn-download-small
+	display: inline-flex
+	border: 0
+	background-color: $trsp
+	color: $textdark
+	font-size: 15px
+	transition: $trs
+	&-icon
+		flex: 0 0 auto
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background-color: $gray
+		color: $white
+		font-size: 12px
+		transition: background-color .3s ease
+	&-text
+		display: inline-flex
+		flex-direction: column
+		justify-content: center
+		margin-left: 10px
+		color: $textdark
+		font-size: 14px
+		line-height: 1
+		transition: color .3s ease
+	&:hover
+		.btn-download-small-icon
+			background-color: $orange
+		.btn-download-small-text
+			color: $orange
+	&:active
+		.btn-download-small-icon
+			background-color: darken($orange, 5%)

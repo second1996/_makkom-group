@@ -168,10 +168,12 @@
 			content: ''
 			position: absolute
 			top: 45px
-			left: -35px
+			left: -65px
 			width: 1px
 			height: calc(100% - 20px)
 			border-left: 1px dashed $gray
+			+media-breakpoint-down(sm)
+				left: -35px
 		.title
 			margin-bottom: 15px
 			color: $darkblue-2

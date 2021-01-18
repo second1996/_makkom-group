@@ -1,0 +1,54 @@
+@import "../helpers/helpers"
+
+.reports
+	&-section
+		&:not(:last-child)
+			margin-bottom: 60px
+			+media-breakpoint-down(sm)
+				margin-bottom: 40px
+	&-title
+		display: flex
+		align-items: center
+		margin-bottom: 0
+		&::before
+			content: ''
+			flex: 0 0 auto
+			display: block
+			width: 6px
+			height: 6px
+			margin-right: 12px
+			border-radius: 50%
+			background-color: $green
+			+media-breakpoint-down(xs)
+				margin-right: 9px
+	&-list
+		margin-top: 20px
+		+media-breakpoint-down(xs)
+			margin-top: 10px
+	&-item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 12px 20px
+		border-bottom: 1px solid $border
+		transition: background-color .35s linear, border .35s ease-in-out
+		+media-breakpoint-down(xs)
+			padding: 10px 15px
+		.title
+			padding-right: 30px
+			color: $textdark
+			font-weight: $w-medium
+			+media-breakpoint-down(xs)
+				font-size: 14px
+		.btn-download-small
+			flex: 0 0 auto
+			&-text
+				+media-breakpoint-down(sm)
+					max-width: 90px
+				+media-breakpoint-down(xs)
+					display: none
+		&:hover
+			border-bottom-color: $orange
+			background-color: $lightorange
+			.btn-download-small-icon
+				background-color: $orange
