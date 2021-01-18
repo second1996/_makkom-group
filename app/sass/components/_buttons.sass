@@ -12,13 +12,16 @@
 	font-family: inherit
 	font-size: 15px
 	font-weight: $w-regular
-	line-height: 62px
 	text-align: center
 	white-space: nowrap
 	outline: none!important
 	transition: $trs
 	&:hover
 		color: $white
+	+media-breakpoint-down(sm)
+		&:not(.btn-cabinet)
+			height: 56px
+			padding: 0 24px
 
 .btn-icon
 	> .icon ~ span,
@@ -29,22 +32,16 @@
 	background-color: $orange
 	&:hover
 		background-color: darken($orange, 5%)
-		box-shadow: 0 0 0 5px rgba($orange, 0.2)
+		box-shadow: 0 0 0 5px rgba($orange, 0.18)
 	&:active
 		box-shadow: 0 0 0 3px rgba($orange, 0.2)
 		background-color: lighten($orange, 2%)
 
-.btn-user-profile
+.btn-cabinet
 	height: 48px
 	padding-left: 20px
 	padding-right: 20px
 	line-height: 48px
-	+media-breakpoint-down(lg)
-		height: 40px
-		padding-left: 12px
-		padding-right: 12px
-		line-height: 40px
-		font-size: 14px
 
 .btn-download
 	display: inline-flex

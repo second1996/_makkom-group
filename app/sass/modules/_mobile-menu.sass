@@ -1,0 +1,79 @@
+.m-menu
+	overflow: hidden
+	position: absolute
+	top: 100px
+	left: 10px
+	right: 10px
+	z-index: $z-index-mobile-menu
+	box-shadow: 0 0 24px 2px rgba($darkblue, 0.25)
+	visibility: hidden
+	opacity: 0
+	transform: translate3d(0, 25px, 0)
+	transition: .4s ease
+	+media-breakpoint-up(xl)
+		display: none
+	&._shown
+		visibility: visible
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+		.m-menu-navigation > li,
+		.m-menu-cabinet,
+		.m-menu-bottom
+			animation-name: fadeInUp
+			animation-fill-mode: both
+			animation-duration: 1s
+	&-inner
+		overflow-y: auto
+		z-index: 1
+		height: 100%
+		padding: 30px 15px
+		background-color: $white
+	&-navigation
+		@for $i from 1 through 10
+			> li:nth-child(#{$i})
+				animation-delay: $i*0.1s
+		> li
+			transition: $trs
+			&:not(:last-child)
+				margin-bottom: 12px
+			> a
+				color: $darkblue
+				font-size: 20px
+				font-weight: $w-bold
+				&:hover
+					color: $orange
+			> ul
+				> li
+					margin-top: 4px
+					> a
+						color: $darkblue
+						&::before
+							content: '—'
+							display: inline-block
+							margin-right: 5px
+							color: $darkblue
+							transition: color .3s ease
+						&:hover
+							color: $orange
+							&::before
+								color: $orange
+	&-cabinet
+		margin-top: 25px
+		animation-delay: 0.5s
+	&-bottom
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		margin-top: 20px
+		padding-top: 10px
+		border-top: 1px solid $border
+		animation-delay: 0.5s
+		.phone,
+		.copyright
+			margin: 3px 0
+			font-size: 14px
+		.phone
+			padding-right: 10px
+		.copyright
+			color: lighten($textlight, 20%)

@@ -8,6 +8,9 @@
 	&-top
 		padding-top: 80px
 		padding-bottom: 80px
+		+media-breakpoint-down(md)
+			padding-top: 60px
+			padding-bottom: 60px
 	&-navigation
 		display: flex
 		align-items: center
@@ -15,7 +18,10 @@
 		+media-breakpoint-down(md)
 			flex-wrap: wrap
 		.logo
+			flex: 0 0 auto
 			max-width: 168px
+			margin-right: 40px
+			padding: 10px 0
 			+media-breakpoint-down(lg)
 				max-width: 150px
 			+media-breakpoint-down(md)
@@ -23,13 +29,28 @@
 		.navigation
 			display: inline-flex
 			align-items: center
+			+media-breakpoint-down(md)
+				flex-wrap: wrap
 			&-list
 				display: inline-flex
+				flex-wrap: wrap
+				padding: 10px 0
+				+media-breakpoint-down(sm)
+					display: flex
+					width: 100%
+					justify-content: space-between
 				> li
-					margin-left: 40px
+					margin-right: 40px
+					padding: 5px 0
 					line-height: 1
 					+media-breakpoint-down(lg)
-						margin-left: 25px
+						margin-right: 25px
+					+media-breakpoint-down(sm)
+						margin-right: 0
+					+media-breakpoint-down(xs)
+						flex: 0 0 50%
+						margin-right: 0
+						padding: 10px 0
 					> a
 						display: inline-block
 						color: $white
@@ -42,14 +63,30 @@
 					> ul
 						display: none
 			&-button
-				margin-left: 40px
-				+media-breakpoint-down(lg)
-					margin-left: 25px
+				&:hover
+					box-shadow: 0 0 0 5px rgba($white, 0.1)
+				&:active
+					box-shadow: 0 0 0 3px rgba($white, 0.1)
+				+media-breakpoint-down(md)
+					margin-top: 10px
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+					justify-content: center
 	&-contacts
 		padding-top: 80px
+		+media-breakpoint-down(md)
+			padding-top: 60px
 		.contacts
+			margin-top: -15px
+			margin-bottom: -15px
+			&-adress
+				+media-breakpoint-down(md)
+					flex: 0 0 100%
+					.contacts-item
+						max-width: 100%
 			&-item
 				max-width: 300px
+				padding: 15px 0
 			&-head
 				display: inline-flex
 				align-items: center
@@ -82,11 +119,17 @@
 		&-inner
 			display: flex
 			align-items: center
+			flex-wrap: wrap
 			justify-content: space-between
+			+media-breakpoint-down(xs)
+				flex-direction: column
 			.copyright,
 			.madeby
+				margin: 4px 0
 				color: #bbb
 				font-size: 14px
+			.copyright
+				padding-right: 10px
 			.madeby
 				> i
 					color: red

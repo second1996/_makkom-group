@@ -1,9 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const burgerButton = document.querySelector('.navigation-burger');
-
-  burgerButton.addEventListener('click', el => {
-    el.currentTarget.classList.toggle('_is-active')
-  })
 
 })
+
+
+$(document).ready( function() {
+
+
+  /**
+   * Mobile menu
+   */
+  const burgerButton = $('.navigation-burger');
+  const mobileMenu = $('.m-menu');
+
+  burgerButton.on('click', function() {
+    $(this).toggleClass('_is-active');
+    mobileMenu.toggleClass('_shown');
+
+    // $(document).mouseup(function(e) {
+    //   if (!mobileMenu.is(e.target) && mobileMenu.has(e.target).length === 0) {
+    //     mobileMenu.removeClass('_shown');
+    //   }
+    // });
+  });
+
+});
