@@ -6,19 +6,30 @@
 .card
 	position: relative
 	height: 100%
+	padding: 40px
 	border-radius: 4px
 	border: 1px solid $lightblue
 	background-color: $lightblue
 	transition: background-color .35s linear, border .35s ease-in-out
+	+media-breakpoint-down(lg)
+		padding: 30px
+	+media-breakpoint-down(sm)
+		min-height: 100%
+	+media-breakpoint-down(xs)
+		padding: 25px
 	&-inner
 		display: flex
 		flex-direction: column
 		height: 100%
+	&-published
+		margin-bottom: 10px
+		color: $textlight
+		font-size: 14px
+		line-height: 1
 	&-title
 		margin-bottom: 0
 	&-descr
 		margin-top: 0
-	&-permalink
 	&:hover
 		border-color: $orange
 		background-color: $lightorange
@@ -29,13 +40,6 @@
 	 ========================================================================== */
 .card-section
 	min-height: 290px
-	padding: 40px
-	+media-breakpoint-down(lg)
-		padding: 30px
-	+media-breakpoint-down(sm)
-		min-height: 100%
-	+media-breakpoint-down(xs)
-		padding: 25px
 	.card-title
 		margin-bottom: 20px
 		color: $darkblue
@@ -55,6 +59,50 @@
 	.card-permalink
 		margin-top: auto
 		padding-top: 40px
+		> a
+			display: inline-flex
+			align-items: center
+			color: $darkblue
+			font-weight: $w-medium
+			line-height: 1
+			> span
+				font-size: 15px
+			> .icon
+				width: 20px
+				height: 20px
+				margin-top: 2px
+				margin-left: 10px
+				transition: transform .3s ease
+			&:hover
+				color: $orange
+				> .icon
+					transform: translate3d(4px, 0, 0)
+
+
+/* ==========================================================================
+	 Card «Simple»
+	 ========================================================================== */
+.card-simple
+	min-height: 200px
+	&:hover
+		.btn-download-small-icon
+			background-color: $orange
+	.card-title
+		margin-bottom: 0
+		color: $darkblue
+		font-size: 18px
+		font-weight: $w-medium
+		+media-breakpoint-down(md)
+			margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			font-size: 16px
+	.card-descr
+		color: $textdark
+		+media-breakpoint-down(lg)
+			font-size: 15px
+	.card-download
+		margin-top: auto
+		padding-top: 20px
 		> a
 			display: inline-flex
 			align-items: center
