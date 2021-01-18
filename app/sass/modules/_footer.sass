@@ -3,14 +3,15 @@
 .footer
 	margin-top: 120px
 	background-color: $darkblue-2
-
+	+media-breakpoint-down(sm)
+		margin-top: 90px
 	// Footer top
 	&-top
 		padding-top: 80px
 		padding-bottom: 80px
 		+media-breakpoint-down(md)
-			padding-top: 60px
-			padding-bottom: 60px
+			padding-top: 50px
+			padding-bottom: 50px
 	&-navigation
 		display: flex
 		align-items: center
@@ -75,7 +76,7 @@
 	&-contacts
 		padding-top: 80px
 		+media-breakpoint-down(md)
-			padding-top: 60px
+			padding-top: 50px
 		.contacts
 			margin-top: -15px
 			margin-bottom: -15px

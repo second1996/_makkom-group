@@ -66,7 +66,8 @@ function browserSync() {
 	browsersync.init({
 		server: { baseDir: './' + projectDir + '/' },
 		notify: false,
-		online: online
+		online: online,
+		// tunnel: 'makkom' // Attempt to use the URL https://makkom.loca.lt
 	})
 }
 

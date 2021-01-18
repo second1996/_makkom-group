@@ -1,12 +1,13 @@
 @import '../helpers/helpers'
 
 .header
-	padding-top: 35px
-	padding-bottom: 35px
 	&-inner
 		display: flex
 		align-items: center
 		justify-content: space-between
+		padding-top: 35px
+		padding-bottom: 35px
+		border-bottom: 1px solid #eee
 	.logo
 		flex: 0 0 auto
 		max-width: 168px
@@ -68,12 +69,16 @@
 					transition: $trs
 					> li
 						background-color: $white
+						border-left: 1px solid $border
+						border-right: 1px solid $border
 						&:first-child
 							padding-top: 6px
 							border-radius: 2px 2px 0 0
+							border-top: 1px solid $border
 						&:last-child
 							padding-bottom: 6px
 							border-radius: 0 0 2px 2px
+							border-bottom: 1px solid $border
 						> a
 							display: block
 							padding: 8px 16px
@@ -102,7 +107,7 @@
 				display: block
 				width: 100%
 				height: 2px
-				background-color: $white
+				background-color: $darkblue
 				transition: transform .3s ease, opacity .15s ease
 			&._is-active
 				> span
@@ -125,6 +130,8 @@
 		left: 0
 		right: 0
 		z-index: $z-index-header
+		.header-inner
+			border-bottom: 0
 		.navigation
 			&-list
 				> li
@@ -132,6 +139,9 @@
 						background-image: url('../images/icons/arrow-down-white.svg')
 					> a
 						color: $white
+			&-burger
+				> span
+					background-color: $white
 			&-button
 				&:hover
 					box-shadow: 0 0 0 5px rgba($white, 0.1)
