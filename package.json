@@ -29,6 +29,7 @@
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.5.1",
 		"jquery-mask-plugin": "^1.14.16",
-		"npm-check-updates": "^10.2.5"
+		"npm-check-updates": "^10.2.5",
+		"swiper": "^6.4.5"
 	}
 }

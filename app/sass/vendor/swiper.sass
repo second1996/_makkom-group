@@ -1,0 +1,37 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+	 Import Swiper base CSS
+	 ========================================================================== */
+@import 'node_modules/swiper/swiper.min'
+
+
+/* ==========================================================================
+	 Swiper customization
+	 ========================================================================== */
+.swiper-button-prev,
+.swiper-button-next
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background-color: $orange
+	color: $white
+	font-size: 12px
+	transition: $trs
+	&:hover
+		background-color: darken($orange, 5%)
+		box-shadow: 0 0 0 5px rgba($orange, 0.18)
+	&:active
+		box-shadow: 0 0 0 3px rgba($orange, 0.2)
+		background-color: lighten($orange, 2%)
+
+.swiper-button-prev
+	.icon
+		transform: rotate(90deg)
+
+.swiper-button-next
+	.icon
+		transform: rotate(-90deg)
