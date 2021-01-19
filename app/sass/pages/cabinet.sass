@@ -1,0 +1,93 @@
+@import "../helpers/helpers"
+
+// --------------------------------------------------
+// Authorization page
+// --------------------------------------------------
+.authorization
+	display: flex
+	+media-breakpoint-down(sm)
+		flex-direction: column-reverse
+	&-heroes,
+	&-form
+		flex: 0 0 50%
+		height: 100vh
+		min-height: 520px
+		padding: 30px
+		+media-breakpoint-down(sm)
+			height: 100%
+			min-height: 100%
+			padding: 60px 20px
+	&-heroes
+		position: relative
+		z-index: 1
+		background: url('../../images/authorization-image.jpg') no-repeat center/cover
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+			display: block
+			width: 100%
+			height: 100%
+			background-color: rgba($darkblue-2, 0.85)
+		&-inner
+			display: flex
+			justify-content: center
+			flex-direction: column
+			max-width: 620px
+			margin: 0 auto
+			height: 100%
+			.title
+				margin-bottom: 20px
+				color: $white
+				font-size: 36px
+				+media-breakpoint-down(lg)
+					font-size: 30px
+				+media-breakpoint-down(md)
+					font-size: 26px
+				+media-breakpoint-down(sm)
+					font-size: 22px
+			.description
+				max-width: 540px
+				margin-top: 0
+				color: $white
+				+media-breakpoint-down(md)
+					font-size: 15px
+	&-form
+		position: relative
+		&-back
+			position: absolute
+			top: 30px
+			left: 30px
+			display: inline-flex
+			align-items: center
+			+media-breakpoint-down(sm)
+				left: 20px
+			.icon
+				margin-right: 6px
+				transform: scaleX(-1) translateY(-1px)
+		&-inner
+			display: flex
+			justify-content: center
+			flex-direction: column
+			max-width: 500px
+			margin: 0 auto
+			height: 100%
+			+media-breakpoint-down(lg)
+				max-width: 400px
+			+media-breakpoint-down(sm)
+				padding-top: 40px
+			.title
+				margin-bottom: 10px
+				font-size: 26px
+				text-align: center
+			.description
+				margin-top: 0
+				color: $textdark
+				text-align: center
+				+media-breakpoint-down(md)
+					font-size: 15px
+			.form
+				margin-top: 30px
+				text-align: center
