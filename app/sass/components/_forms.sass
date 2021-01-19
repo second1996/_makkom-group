@@ -3,6 +3,9 @@
 /* ==========================================================================
 	 Base customize for forms
 	 ========================================================================== */
+::placeholder
+	color: $textlight
+
 .form
 	position: relative
 	&-label
@@ -16,22 +19,25 @@
 		display: block
 		width: 100%
 		margin-bottom: 20px
-		color: $textlight
-		font-size: 14px
-		font-weight: 400
-		border-radius: 6px
+		border-radius: 4px
 		border: 0
 		background-color: #f7f7f7
 		background-clip: padding-box
-		color: $black
+		color: $textdark
+		font-size: 14px
+		font-weight: 400
 		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
 		&:focus
 			box-shadow: 0 0 0 2px $orange
 			background-color: $white
 	&-control
-		height: 60px
-		padding: 0 32px
+		height: 62px
+		padding: 0 30px
 		line-height: 60px
+		+media-breakpoint-down(sm)
+			height: 54px
+			padding: 0 20px
+			line-height: 52
 		&--number
 			-moz-appearance: textfield
 			&::-webkit-outer-spin-button,
@@ -41,3 +47,6 @@
 	&-textarea
 		resize: none
 		padding: 8px 16px
+	&-submit
+		min-width: 190px
+		height: 62px

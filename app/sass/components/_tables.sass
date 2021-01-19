@@ -1,0 +1,45 @@
+.table-responsive
+	overflow-x: auto
+
+table
+	width: 100%
+	border: 1px solid $border
+	thead
+		background-color: $darkblue-2
+		th
+			padding: 30px 20px
+			color: $white
+			font-size: 16px
+			font-weight: $w-regular
+			text-align: center
+			+media-breakpoint-down(sm)
+				padding: 20px 15px
+				font-size: 15px
+			+media-breakpoint-down(xs)
+				padding: 15px 10px
+				font-size: 14px
+			&:not(:last-child)
+				border-right: 1px solid rgba($white, 0.1)
+	tbody
+		tr
+			&:not(:last-child)
+				border-bottom: 1px solid $border
+			&:nth-child(even)
+				background-color: $lightblue
+		th
+			font-weight: $w-medium
+		th,
+		td
+			color: $textdark
+			font-size: 15px
+			padding: 20px
+			+media-breakpoint-down(sm)
+				padding: 15px
+				font-size: 14px
+			+media-breakpoint-down(xs)
+				padding: 10px
+				font-size: 13px
+			b, strong
+				font-weight: $w-medium
+			&:not(:last-child)
+				border-right: 1px solid $border
