@@ -1,12 +1,13 @@
 @import '../helpers/helpers'
 
 article
+	color: $textdark
+
 	h1, h2, h3, h4, h5, h6
-		margin-bottom: 20px
+		margin-bottom: 16px
 		font-size: 22px
-		font-weight: 500
 		&:not(:first-of-type)
-			margin-top: 40px
+			margin-top: 32px
 		+media-breakpoint-down(md)
 			font-size: 20px
 		+media-breakpoint-down(xs)
@@ -14,23 +15,34 @@ article
 
 	p,
 	img,
-	ul,
-	ol,
 	blockquote, table
-		margin-bottom: 10px
+		margin-top: 16px
+
+	ul,
+	ol
+		margin-top: 10px
+	
+	ul
+		> li
+			display: flex
+			align-items: center
+			&:not(:last-child)
+				margin-bottom: 6px
+			&::before
+				content: ''
+				flex: 0 0 auto
+				display: block
+				width: 10px
+				height: 10px
+				margin-right: 12px
+				background-color: $green
 
 	b,
 	strong
-		font-weight: 500
-
-	p,
-	ul > li,
-	ul > li > a
-		+media-breakpoint-down(xs)
-			font-size: 15px
+		font-weight: $w-medium
 
 	a
-		color: $textlight
-		font-weight: 500
+		color: $textdark
+		font-weight: $w-medium
 		&:hover
 			color: $orange
