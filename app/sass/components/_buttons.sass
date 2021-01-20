@@ -1,4 +1,4 @@
-.btn, button
+.btn
 	position: relative
 	z-index: 1
 	display: inline-flex
@@ -57,6 +57,7 @@
 	 Button «Download»
 	 ========================================================================== */
 .btn-download
+	user-select: none
 	display: inline-flex
 	border: 0
 	background-color: $trsp
@@ -74,7 +75,11 @@
 		background-color: $green
 		color: $white
 		font-size: 12px
-		transition: transform .3s ease, background-color .3s linear
+		transition: $trs
+		+media-breakpoint-down(xs)
+			width: 50px
+			height: 50px
+			margin-right: 12px
 	&-text
 		display: inline-flex
 		flex-direction: column
@@ -87,20 +92,27 @@
 			color: $green
 			font-weight: $w-medium
 			line-height: 1
+		+media-breakpoint-down(xs)
+			padding-bottom: 0
+			font-size: 14px
 	&:hover
 		color: $textdark
 		.btn-download-icon
-			transform: scale(1.1)
+			box-shadow: 0 0 0 5px rgba($green, 0.18)
+			background-color: darken($green, 5%)
+			+media-breakpoint-down(xs)
+				box-shadow: 0 0 0 4px rgba($green, 0.18)
 	&:active
 		.btn-download-icon
-			background-color: darken($green, 5%)
-			transform: none
+			box-shadow: 0 0 0 3px rgba($green, 0.2)
+			background-color: lighten($green, 2%)
 
 
 /* ==========================================================================
 	 Button «Download» — small
 	 ========================================================================== */
 .btn-download-small
+	user-select: none
 	display: inline-flex
 	border: 0
 	background-color: $trsp

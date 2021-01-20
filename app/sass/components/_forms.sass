@@ -13,11 +13,19 @@ input[type="password"]
 
 .form
 	position: relative
+	&-group
+		margin-bottom: 20px
+		.form-control,
+		.form-textarea
+			margin-bottom: 0
 	&-label
 		margin-bottom: 12px
-		color: $black
+		color: $darkblue
 		font-size: 15px
+		font-weight: $w-medium
 		cursor: pointer
+		+media-breakpoint-down(xs)
+			font-size: 14px
 	&-control,
 	&-textarea
 		appearance: none
@@ -26,14 +34,14 @@ input[type="password"]
 		margin-bottom: 20px
 		border-radius: 4px
 		border: 0
-		background-color: #f7f7f7
+		background-color: $lightblue
 		background-clip: padding-box
 		color: $textdark
 		font-size: 14px
 		font-weight: 400
 		transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, background-color .3s ease-in-out
 		&:focus
-			box-shadow: 0 0 0 2px $orange
+			box-shadow: 0 0 0 2px rgba($green, 0.5)
 			background-color: $white
 	&-control
 		height: 62px
@@ -55,3 +63,4 @@ input[type="password"]
 	&-submit
 		min-width: 190px
 		height: 62px
+		margin-top: 10px

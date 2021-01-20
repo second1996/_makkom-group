@@ -1,5 +1,10 @@
 @import '../helpers/helpers'
 
+body.modal-open
+	+media-breakpoint-up(lg)
+		.header--light
+			padding-right: 17px
+
 .modal
 	padding-right: 0!important
 	padding-left: 0!important
@@ -9,3 +14,65 @@
 	&.show
 		.modal-dialog
 			transform: none
+	&-content
+		border-radius: 4px
+		border: 0
+
+	// Modal header
+	&-header
+		align-items: center
+		padding: 30px
+		border-bottom: 1px solid $border
+		+media-breakpoint-down(xs)
+			padding: 20px
+	&-title
+		padding-right: 30px
+		line-height: 1.2
+	&-close
+		flex: 0 0 auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		width: 40px
+		height: 40px
+		padding: 10px
+		border-radius: 50%
+		border: 0
+		background-color: rgba($gray, 0.15)
+		box-sizing: border-box
+		outline: none !important
+		transition: background-color .3s ease
+		+media-breakpoint-down(xs)
+			width: 36px
+			height: 36px
+			padding: 8px
+		> span
+			display: block
+			width: 100%
+			height: 1px
+			background-color: $gray
+			transform-origin: 50%
+			transition: transform .3s ease, opacity .15s ease
+			&:nth-child(1)
+				transform: translateY(9.5px) rotate(45deg)
+			&:nth-child(2)
+				transform: translateY(-9.5px) rotate(-45deg)
+		&:hover
+			background-color: $white
+			> span
+				background-color: $orange
+				&:nth-child(1)
+					transform: translateY(9px) rotate(0deg)
+				&:nth-child(2)
+					transform: translateY(-9px) rotate(0deg)
+
+	// Modal body
+	&-body
+		padding: 20px 30px 45px
+		+media-breakpoint-down(xs)
+			padding: 20px 20px 25px
+	&-descr
+		margin-top: 0
+		margin-bottom: 30px
+		color: $textlight

@@ -20,18 +20,29 @@
 	background-color: $orange
 	color: $white
 	font-size: 12px
+	outline: none
 	transition: $trs
+	+media-breakpoint-down(xs)
+		width: 46px
+		height: 46px
 	&:hover
 		background-color: darken($orange, 5%)
 		box-shadow: 0 0 0 5px rgba($orange, 0.18)
+		+media-breakpoint-down(xs)
+			box-shadow: 0 0 0 4px rgba($orange, 0.18)
 	&:active
 		box-shadow: 0 0 0 3px rgba($orange, 0.2)
 		background-color: lighten($orange, 2%)
 
 .swiper-button-prev
+	margin-right: 10px
 	.icon
 		transform: rotate(90deg)
 
 .swiper-button-next
 	.icon
 		transform: rotate(-90deg)
+
+.swiper-button-disabled
+	pointer-events: none
+	opacity: 0.2

@@ -29,7 +29,7 @@
 					<div class="h-heroes-content-inner">
 						<h1 class="title text-xxl">Природний газ від єдиного постачальника</h1>
 						<p class="descr text-sm">Спеціалізуємося на постачанні природного газу для промислових та оптових споживачів на газовому ринку України</p>
-						<a href="#" class="btn btn-primary">Заявка на підключення</a>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#joinModal">Заявка на підключення</button>
 					</div>
 				</div>
 				<div class="h-heroes-advantages container">
@@ -143,7 +143,7 @@
 						<div class="h-work-process-content">
 							<h4 class="title">Заявка на підключення</h4>
 							<p class="descr">Після успішого заключення договору між Вами та ТОВ «МАККОМ-ГРУП», Ви починаєте користуватися всіма перевагами нашого сервісу. Починаючи з першого дня постачання природного газу споживач отримує усі переваги, які дає співпраця з нашою компанією.</p>
-							<button class="btn btn-primary" data-toggle="modal">Залишити заявку</button>
+							<button class="btn btn-primary" data-toggle="modal" data-target="#joinModal">Залишити заявку</button>
 						</div>
 					</div><!-- /.h-work-process-item -->
 				</div><!-- /.h-work-process-list -->
@@ -153,6 +153,39 @@
 	</main>
 
 	@@include('_footer.html')
+
+	<!---------- Join Us Modal ---------->
+	<div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-md">Заявка на підключення</h5>
+					<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-descr text-xs">Заповніть коротку заявку, наш спеціаліст зв'яжеться з Вами та проконсультує подальші дії. Дякуємо за очікування!</p>
+					<form class="modal-form form">
+						<div class="form-group">
+							<label for="u-name" class="form-label">Ваше ім'я</label>
+							<input type="text" id="u-name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for="u-phone" class="form-label">Номер телефону</label>
+							<input type="tel" id="u-phone" class="form-control" data-mask="+38 (099) 99-99-999" autocomplete="off" required>
+						</div>
+						<div class="form-group">
+							<label for="u-email" class="form-label">Електронна адреса</label>
+							<input type="email" id="u-email" class="form-control" required>
+						</div>
+						<button	ton type="submit" class="form-submit btn btn-primary">Надіслати</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/vendors.min.js"></script>
 	<script src="js/app.js"></script>
