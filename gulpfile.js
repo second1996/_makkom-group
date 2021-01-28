@@ -96,7 +96,7 @@ function styles() {
 		.pipe(eval(preprocessor)())
 		.pipe(mediaqueries())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(cleancss( {level: { 1: { specialComments: 0 } }, format: 'beautify' }))
+		.pipe(cleancss( {level: { 1: { specialComments: 0 } }, /* format: 'beautify' */ }))
 		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream())
 }
