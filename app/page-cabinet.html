@@ -36,8 +36,10 @@
 			<div class="authorization-form-inner">
 				<h1 class="title">Авторизація</h1>
 				<p class="description">Будь ласка, вкажіть Ваші персональні дані для авторизації в особистий кабінет споживача</p>
-				<form class="form">
-					<input type="text" class="form-control" placeholder="ІПН/Номер паспорту" required>
+				<p class="login-error"><strong>Помилка:</strong> Невірний Номер договору або Пароль.</p>
+				<p class="login-success">Ви успішно увійшли в особистий кабінет.</p>
+				<form class="form" id="cabinet-form">
+					<input type="text" class="form-control" placeholder="Номер договору" required>
 					<input type="password" class="form-control" placeholder="Пароль" required>
 					<button type="submit" class="form-submit btn btn-primary">Увійти</button>
 				</form>

@@ -84,10 +84,28 @@
 				text-align: center
 			.description
 				margin-top: 0
+				margin-bottom: 30px
 				color: $textdark
 				text-align: center
 				+media-breakpoint-down(md)
 					font-size: 15px
 			.form
-				margin-top: 30px
 				text-align: center
+			.login-error,
+			.login-success
+				display: block
+				margin-top: 0
+				margin-bottom: 20px
+				border-radius: 4px
+				border-width: 1px
+				border-style: solid
+				padding: 16px 30px 18px
+				font-size: 15px
+			.login-error
+				border-color: #DCB0B0
+				background-color: #FFECEC
+				color: #744E4E
+			.login-success
+				border-color: #B1DCB0
+				background-color: #F2FFEC
+				color: #53744E
