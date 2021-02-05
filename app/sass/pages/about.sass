@@ -5,12 +5,6 @@
 
 
 // --------------------------------------------------
-// About Intro
-// --------------------------------------------------
-.about-intro
-
-
-// --------------------------------------------------
 // About Photo
 // --------------------------------------------------
 .about-photo
@@ -90,6 +84,50 @@
 			+media-breakpoint-down(md)
 				flex-basis: 100%
 
+
+// --------------------------------------------------
+// About Map
+// --------------------------------------------------
+.about-map
+	&-wrapper
+		position: relative
+		margin-top: 30px
+		&:hover
+			.about-map-btn
+				opacity: 1
+			.about-map-photo::after
+				opacity: 1
+	&-btn
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2
+		opacity: 0
+		transform: translate(-50%, -50%)
+		transition: opacity .3s ease
+		+media-breakpoint-down(md)
+			opacity: 1
+	&-photo
+		position: relative
+		overflow: hidden
+		height: 250px
+		border-radius: 4px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($darkblue, 0.4)
+			opacity: 0
+			transition: opacity .3s ease
+			+media-breakpoint-down(md)
+				opacity: 1
+		> img
+			width: 100%
+			height: 100%
+			object-fit: cover
 
 // --------------------------------------------------
 // About Certificates
