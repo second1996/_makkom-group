@@ -14,11 +14,11 @@ $(document).ready( function() {
   /**
    * Gas counter
    */
-  const date1 = new Date(2021, 1, 8);
+  const date1 = new Date(2021, 1, 10);
   const date2 = new Date();
   const daysLag = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
-  const gasCount = (49.282 + 0.017 * daysLag).toFixed(3);
-  const gasCountRounded = (49.282 + 0.017 * daysLag).toFixed(1);
+  const gasCount = (49.966 + 0.017 * daysLag).toFixed(3);
+  const gasCountRounded = (49.966 + 0.017 * daysLag).toFixed(1);
 
   if( $('#gas-count').length ) {
     $('#gas-count').text(gasCount.replace(/\./, ','));
